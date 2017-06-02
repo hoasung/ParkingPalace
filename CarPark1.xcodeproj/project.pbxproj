@@ -25,6 +25,7 @@
 		1CEC4CA11ECEF7AE00FCFAEA /* MarkerInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CEC4CA01ECEF7AE00FCFAEA /* MarkerInfo.xib */; };
 		1CEC4CA31ECEF88B00FCFAEA /* MarkerInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC4CA21ECEF88B00FCFAEA /* MarkerInfoView.swift */; };
 		1CEC4CA61ECF1C0200FCFAEA /* WSParserMarkerPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC4CA51ECF1C0200FCFAEA /* WSParserMarkerPlace.swift */; };
+		1CFC85521EDFD1AF009CED1C /* TakeImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFC85511EDFD1AF009CED1C /* TakeImageController.swift */; };
 		527A99AD1171158B91209EC4 /* Pods_CarPark1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCB92021EC2C1DC63A3DE989 /* Pods_CarPark1.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,7 @@
 		1CEC4CA01ECEF7AE00FCFAEA /* MarkerInfo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MarkerInfo.xib; sourceTree = "<group>"; };
 		1CEC4CA21ECEF88B00FCFAEA /* MarkerInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkerInfoView.swift; sourceTree = "<group>"; };
 		1CEC4CA51ECF1C0200FCFAEA /* WSParserMarkerPlace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSParserMarkerPlace.swift; sourceTree = "<group>"; };
+		1CFC85511EDFD1AF009CED1C /* TakeImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeImageController.swift; sourceTree = "<group>"; };
 		A1728A2AFAAE8B9C5E35C03D /* Pods-CarPark1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarPark1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CarPark1/Pods-CarPark1.debug.xcconfig"; sourceTree = "<group>"; };
 		D8A1FDA3D598C3FC6E701349 /* Pods-CarPark1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarPark1.release.xcconfig"; path = "Pods/Target Support Files/Pods-CarPark1/Pods-CarPark1.release.xcconfig"; sourceTree = "<group>"; };
 		DCB92021EC2C1DC63A3DE989 /* Pods_CarPark1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarPark1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -102,6 +104,7 @@
 				1CA914F41ECCAD3900D62AC2 /* MapViewController.swift */,
 				1CEC4C991ECE877B00FCFAEA /* MapTasks.swift */,
 				1CA914F61ECCAD3900D62AC2 /* Main.storyboard */,
+				1CFC85511EDFD1AF009CED1C /* TakeImageController.swift */,
 				1CEC4CA01ECEF7AE00FCFAEA /* MarkerInfo.xib */,
 				1CEC4CA21ECEF88B00FCFAEA /* MarkerInfoView.swift */,
 				1CA914FC1ECCAD3900D62AC2 /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 				1C142E3F1ECFDC3E00236114 /* ArrayShuffle.swift in Sources */,
 				1C7E68CC1ED3E59100BED830 /* AddParkingplaceController.swift in Sources */,
 				1C142E3D1ECFDC0F00236114 /* Array2D.swift in Sources */,
+				1CFC85521EDFD1AF009CED1C /* TakeImageController.swift in Sources */,
 				1CA914F51ECCAD3900D62AC2 /* MapViewController.swift in Sources */,
 				1CEC4C9A1ECE877B00FCFAEA /* MapTasks.swift in Sources */,
 				1CEC4C9C1ECEC94C00FCFAEA /* MarkerPlace.swift in Sources */,

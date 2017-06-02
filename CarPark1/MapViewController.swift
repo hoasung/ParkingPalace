@@ -21,7 +21,7 @@ class MapViewController: UIViewController, CAAnimationDelegate {
     
     @IBOutlet weak var markerInfo: MarkerInfoView!
     
-    
+    let api_key = "AIzaSyAMl_O6ExrmOud5p45cY3Uf-RL50Fc0RZU"
     
     var mapTasks = MapTasks()
     
@@ -58,9 +58,10 @@ class MapViewController: UIViewController, CAAnimationDelegate {
         let addPlaceController = self.storyboard?.instantiateViewController(withIdentifier: "addParkingPlace") as! AddParkingplaceController
         addPlaceController.lat = coordinate.latitude
         addPlaceController.long1 = coordinate.longitude
-        self.present(addPlaceController, animated: true, completion: nil)
-       // self.navigationController?.pushViewController(addPlaceController, animated: true)
-
+        getAddressFromLatLon(pdblLatitude: coordinate.latitude, withLongitude: coordinate.longitude,controllerHander: addPlaceController)
+        //addPlaceController.addressValue = getAddressFromLatLon(pdblLatitude: coordinate.latitude, withLongitude: coordinate.longitude)
+        //self.present(addPlaceController, animated: true, completion: nil)
+        //self.navigationController?.pushViewController(addPlaceController, animated: true)
         
     }
     override func viewDidLoad() {
@@ -218,11 +219,61 @@ class MapViewController: UIViewController, CAAnimationDelegate {
                 }
             })
         
-        
-        
     }
     
     
+    func getAddressFromLatLon(pdblLatitude: Double, withLongitude pdblLongitude: Double, controllerHander: AddParkingplaceController) {
+        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
+       // let lat: Double = Double("\(pdblLatitude)")!
+        //21.228124
+       // let lon: Double = Double("\(pdblLongitude)")!
+        //72.833770
+        let ceo: CLGeocoder = CLGeocoder()
+        center.latitude = pdblLatitude
+        center.longitude = pdblLongitude
+        var addressString : String = ""
+        
+        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
+        
+        
+        ceo.reverseGeocodeLocation(loc, completionHandler:
+            {(placemarks, error) in
+                if (error != nil)
+                {
+                    print("reverse geodcode fail: \(error!.localizedDescription)")
+                }
+                let pm = placemarks! as [CLPlacemark]
+                
+                if pm.count > 0 {
+                    let pm = placemarks![0]
+                    
+                    if pm.subLocality != nil {
+                        addressString = addressString + pm.subLocality! + ", "
+                    }
+                    if pm.thoroughfare != nil {
+                        addressString = addressString + pm.thoroughfare! + ", "
+                    }
+                    if pm.locality != nil {
+                        addressString = addressString + pm.locality! + ", "
+                    }
+                    if pm.country != nil {
+                        addressString = addressString + pm.country! + ", "
+                    }
+                    if pm.postalCode != nil {
+                        addressString = addressString + pm.postalCode! + " "
+                    }
+                }
+                self.getAddress(addressString: addressString, showController: controllerHander)
+        })
+        print(addressString);
+//        return addressString
+    }
+    
+    func getAddress(addressString: String,showController: AddParkingplaceController) {
+        showController.addressValue = addressString
+        self.navigationController?.pushViewController(showController, animated: true)
+        
+    }
     
     
 }
