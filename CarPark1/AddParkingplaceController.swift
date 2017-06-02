@@ -69,7 +69,7 @@ class AddParkingplaceController: UIViewController, UIImagePickerControllerDelega
         parkingLocation["remain"] = Int (remain.text!)
         //parkingLocation[""]
        
-        makeHTTPPostRequest(path: "http://192.168.10.7:8080/EnglishDics/webresources/model.parkinglocation/createLocation", body: parkingLocation, chosenImage: imageView.image!)
+        makeHTTPPostRequest(path: "http://42.112.16.180:9898/EnglishDics/webresources/model.parkinglocation/createLocation", body: parkingLocation, chosenImage: imageView.image!)
        
         
         
